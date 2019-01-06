@@ -1,7 +1,8 @@
 #' This function of Optimos Prime calculates optima and tolerance for a matrix of species and environmental factors
 #' @param enviromental_df The dataframe with your environmental data. Variables as rows, Sites as columns
 #' @param species_df The dataframe with your species densities. Species as rows, Sites as columns.
-#' @param islog10 Boolean. If set to 'TRUE' it means that your environmental data is already transformed to log10. Default = False
+#' @param isRelAb Boolean. If set to 'TRUE' it means that your species' data is the relative abundance of each species per site. If FALSE, it means that it the data corresponds to absolute densities. Default = TRUE
+#' @param islog10 Boolean. If set to 'TRUE' it means that your environmental data is already transformed to log10. Default = FALSE
 #' @description
 #' You will need two dataframes. If they are not specified as arguments, you will be prompted to import them from CSV format.
 #' The resulting dataframe from the op_calculate() function will be a dataframe of species (rows) and the optima and tolerance range (+ and -) of the environmental variables (columns)
@@ -22,9 +23,8 @@
 #' @keywords ecology, optimum, tolerance, species density
 #' @export
 
-
 ########-------- FUNCTION OP_CALCULATE CALCULATES OPTIMA AND TOLERANCE RANGES  --------------#########
-op_calculate <- function(enviromental_df, species_df, islog10=FALSE){
+op_calculate <- function(enviromental_df, species_df, isRelAb=TRUE, islog10=FALSE){
     # First checks in environmental and species dataframes exist. If not, loads them from CSV files
     if(missing(enviromental_df) | missing(species_df) ) {
       print("Select CSV matrices")
@@ -46,8 +46,17 @@ op_calculate <- function(enviromental_df, species_df, islog10=FALSE){
     stop("The correct matrices were not selected, the script will cancel.")
   }
 
-  print("Calculating...")
+  print("Calculating... please wait!")
 
+  # IF THE SPECIES DATA IS NOT RELATIVE ABUNDANCE, IT CONVERTS IT TO RELATIVE ABUNDANCE
+  if(isRelAb==FALSE){
+    print("Converting species' densities to relative abundance")
+    for (species_i in 1:nrow(df_densidades)){
+      for (species_j in 2:ncol(df_densidades)){
+        df_densidades[species_i,species_j] <- (df_densidades[species_i,species_j]*100)/sum(df_densidades[,species_j])
+      }
+    }
+  }
   list_sites <- t(colnames(df_densidades[2:ncol(df_densidades)]))
   list_especies <- as.vector(df_densidades[,1])
   list_ambientales <- as.vector(df_ambientales[,1])

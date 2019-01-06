@@ -4,14 +4,17 @@
 \alias{op_calculate}
 \title{This function of Optimos Prime calculates optima and tolerance for a matrix of species and environmental factors}
 \usage{
-op_calculate(enviromental_df, species_df, islog10 = FALSE)
+op_calculate(enviromental_df, species_df, isRelAb = TRUE,
+  islog10 = FALSE)
 }
 \arguments{
 \item{enviromental_df}{The dataframe with your environmental data. Variables as rows, Sites as columns}
 
 \item{species_df}{The dataframe with your species densities. Species as rows, Sites as columns.}
 
-\item{islog10}{Boolean. If set to 'TRUE' it means that your environmental data is already transformed to log10. Default = False}
+\item{isRelAb}{Boolean. If set to 'TRUE' it means that your species' data is the relative abundance of each species per site. If FALSE, it means that it the data corresponds to absolute densities. Default = TRUE}
+
+\item{islog10}{Boolean. If set to 'TRUE' it means that your environmental data is already transformed to log10. Default = FALSE}
 }
 \description{
 You will need two dataframes. If they are not specified as arguments, you will be prompted to import them from CSV format.
