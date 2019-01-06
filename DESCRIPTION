@@ -1,0 +1,16 @@
+Package: optimos.prime
+Type: Package
+Title: Calculates optima and tolerance ranges for biological species given an environmental matrix
+Version: 0.1
+Author: c(person("María Belén", "Sathicq", email = "mbelen@ilpla.edu.ar", role = c("aut")), person("Joaquín", "Cochero", email = "jcochero@ilpla.edu.ar", role = c("cre")))
+Maintainer: Joaquín Cochero <jcochero@ilpla.edu.ar>
+Description: The package Optimos Prime calculates the ecological optima and tolerance ranges of a biological species
+    according to the article: Potapova, M., & Charles, D. F. (2003). Distribution of benthic diatoms in US rivers in relation to conductivity and ionic composition. Freshwater Biology, 48(8), 1311-1328.
+License: GNU General Public License
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Depends:
+    ggplot2,
+    tidyverse,
+    plotly
