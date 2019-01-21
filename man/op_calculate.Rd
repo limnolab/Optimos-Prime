@@ -2,23 +2,23 @@
 % Please edit documentation in R/op_calculate.R
 \name{op_calculate}
 \alias{op_calculate}
-\title{This function of Optimos Prime calculates optima and tolerance for a matrix of species and environmental factors}
+\title{This function of Optimos Prime calculates optima and tolerance for a data frame of species and environmental factors}
 \usage{
 op_calculate(enviromental_df, species_df, isRelAb = TRUE,
   islog10 = FALSE)
 }
 \arguments{
-\item{enviromental_df}{The dataframe with your environmental data. Variables as rows, Sites as columns}
+\item{enviromental_df}{The data frame with your environmental data. Variables as rows, Sites as columns}
 
-\item{species_df}{The dataframe with your species densities. Species as rows, Sites as columns.}
+\item{species_df}{The data frame with your species densities. Species as rows, Sites as columns.}
 
 \item{isRelAb}{Boolean. If set to 'TRUE' it means that your species' data is the relative abundance of each species per site. If FALSE, it means that it the data corresponds to absolute densities. Default = TRUE}
 
 \item{islog10}{Boolean. If set to 'TRUE' it means that your environmental data is already transformed to log10. Default = FALSE}
 }
 \description{
-You will need two dataframes. If they are not specified as arguments, you will be prompted to import them from CSV format.
-The resulting dataframe from the op_calculate() function will be a dataframe of species (rows) and the optima and tolerance range (+ and -) of the environmental variables (columns)
+You will need two data frames. If they are not specified as arguments, you will be prompted to import them from CSV format.
+The resulting data frame from the op_calculate() function will be a data frame of species (rows) and the optima and tolerance range (+ and -) of the environmental variables (columns)
 \itemize{
 \item Matrix 1: Species (rows) by Sampling sites (columns).
     First row needs to be the sampling sites names.
@@ -32,6 +32,10 @@ The resulting dataframe from the op_calculate() function will be a dataframe of 
 The calculations for optima and tolerance ranges is conducted according to the article by Potapova & Charles (2003):
 \itemize{
 \item Potapova, M., & Charles, D. F. (2003). Distribution of benthic diatoms in US rivers in relation to conductivity and ionic composition. Freshwater Biology, 48(8), 1311-1328.
+}
+Sample data is taken from:
+\itemize{
+\item Sathicq, María Belén. (2017). Empleo de descriptores fitoplanctónicos como biomonitores en la evaluación de la calidad del agua en la costa del río de la Plata (Franja Costera Sur). PhD thesis. http://hdl.handle.net/10915/58915
 }
 }
 \keyword{density}

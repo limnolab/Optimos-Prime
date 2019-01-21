@@ -5,7 +5,7 @@
 #' @param label (optional) The label for the X axis (usually the environmental variable's name)
 #' @description
 #' This function plots the specified variable in a caterpillar plot
-#'
+#' @import ggplot2 tidyverse plotly
 #' @keywords ecology, optimum, tolerance, species density
 #' @export
 #'
@@ -15,11 +15,14 @@
 op_plot <- function(optimaDF, label){
   # Needs tidyverse, ggPlot2, plotly libraries
 
+
   #Checks in there's a dataframe or aborts function
   if(missing(optimaDF) ) {
     print("A dataframe with optima and tolerance ranges is needed, as the one obtained from the op_calculate() function.")
     stop("No dataframe specified")
   }
+  #Deletes empty rows so it doesn't get stuck in endless loop trying to graph
+  optimaDF <- optimaDF[complete.cases(optimaDF), ]
 
   #Offers options for variables
   col_indexes <- seq(2,ncol(optimaDF), 3)

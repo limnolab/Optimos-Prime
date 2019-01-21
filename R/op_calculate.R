@@ -1,11 +1,11 @@
-#' This function of Optimos Prime calculates optima and tolerance for a matrix of species and environmental factors
-#' @param enviromental_df The dataframe with your environmental data. Variables as rows, Sites as columns
-#' @param species_df The dataframe with your species densities. Species as rows, Sites as columns.
+#' This function of Optimos Prime calculates optima and tolerance for a data frame of species and environmental factors
+#' @param enviromental_df The data frame with your environmental data. Variables as rows, Sites as columns
+#' @param species_df The data frame with your species densities. Species as rows, Sites as columns.
 #' @param isRelAb Boolean. If set to 'TRUE' it means that your species' data is the relative abundance of each species per site. If FALSE, it means that it the data corresponds to absolute densities. Default = TRUE
 #' @param islog10 Boolean. If set to 'TRUE' it means that your environmental data is already transformed to log10. Default = FALSE
 #' @description
-#' You will need two dataframes. If they are not specified as arguments, you will be prompted to import them from CSV format.
-#' The resulting dataframe from the op_calculate() function will be a dataframe of species (rows) and the optima and tolerance range (+ and -) of the environmental variables (columns)
+#' You will need two data frames. If they are not specified as arguments, you will be prompted to import them from CSV format.
+#' The resulting data frame from the op_calculate() function will be a data frame of species (rows) and the optima and tolerance range (+ and -) of the environmental variables (columns)
 #' \itemize{
 #' \item Matrix 1: Species (rows) by Sampling sites (columns).
 #'     First row needs to be the sampling sites names.
@@ -20,12 +20,16 @@
 #' \itemize{
 #' \item Potapova, M., & Charles, D. F. (2003). Distribution of benthic diatoms in US rivers in relation to conductivity and ionic composition. Freshwater Biology, 48(8), 1311-1328.
 #' }
+#' Sample data is taken from:
+#' \itemize{
+#' \item Sathicq, María Belén. (2017). Empleo de descriptores fitoplanctónicos como biomonitores en la evaluación de la calidad del agua en la costa del río de la Plata (Franja Costera Sur). PhD thesis. http://hdl.handle.net/10915/58915
+#' }
 #' @keywords ecology, optimum, tolerance, species density
 #' @export
 
 ########-------- FUNCTION OP_CALCULATE CALCULATES OPTIMA AND TOLERANCE RANGES  --------------#########
 op_calculate <- function(enviromental_df, species_df, isRelAb=TRUE, islog10=FALSE){
-    # First checks in environmental and species dataframes exist. If not, loads them from CSV files
+    # First checks in environmental and species data frames exist. If not, loads them from CSV files
     if(missing(enviromental_df) | missing(species_df) ) {
       print("Select CSV matrices")
     ########-------- LOADS THE SPECIES AND ENVIRONMENTAL DATA FROM CSV FILES IF NOT IN DATAMATRIX
@@ -57,6 +61,7 @@ op_calculate <- function(enviromental_df, species_df, isRelAb=TRUE, islog10=FALS
       }
     }
   }
+
   list_sites <- t(colnames(df_densidades[2:ncol(df_densidades)]))
   list_especies <- as.vector(df_densidades[,1])
   list_ambientales <- as.vector(df_ambientales[,1])
@@ -67,18 +72,21 @@ op_calculate <- function(enviromental_df, species_df, isRelAb=TRUE, islog10=FALS
   #######---------  IF islog10 parameter is false, converts the environmental data to LOG10
   if (islog10 == FALSE){
     df_ambientales <- log(df_ambientales[2:ncol(df_ambientales)], 10)
+  } else {
+    #if data is already log, it eliminates the first column (labels)
+    df_ambientales <- df_ambientales[,-1]
   }
 
   #########-------- STARTS OPTIMA CALCULATION
   for (species_i in 1:nrow(df_densidades)){
     testsp1 <- df_densidades[species_i, 2:ncol(df_densidades)]
-    # converts the dataframes to matrices for calculation
+    # converts the data frames to matrices for calculation
     testsp1 <- data.matrix(testsp1)
     testamb <- data.matrix(df_ambientales)
     # multiplies both matrices
     testsp1_amb <- sweep(testamb[,1:ncol(testamb)], MARGIN=2, testsp1, '*')
 
-    # converts matrices back to dataframes for row sums
+    # converts matrices back to data frames for row sums
     testsp1_amb <- as.data.frame(testsp1_amb)
     testsp1_amb$sumaAB <- rowSums(testsp1_amb, na.rm=TRUE)
 
@@ -120,8 +128,8 @@ op_calculate <- function(enviromental_df, species_df, isRelAb=TRUE, islog10=FALS
     testsp1_tol$Tol_high <-  10^(testsp1_amb$div + testsp1_tol$SqdivTol)
     testsp1_tol$Tol_low <-  10^(testsp1_amb$div - testsp1_tol$SqdivTol)
 
-    ########-------- COPIES EVERYTHING TO THE FINAL DATAFRAME FOR DISPLAY
-    # COPIES THE OPTIMUM AND TOLERANCE COLUMNS TO A SEPARATE DATAFRAME, TRANSPOSES IT AND COPIES
+    ########-------- COPIES EVERYTHING TO THE FINAL data frame FOR DISPLAY
+    # COPIES THE OPTIMUM AND TOLERANCE COLUMNS TO A SEPARATE DATA FRAME, TRANSPOSES IT AND COPIES
     # IT TO finalDF FOR EXPORT
 
     testsp1_final <- data.frame(testsp1_amb$Optimo, testsp1_tol$Tol_high, testsp1_tol$Tol_low, stringsAsFactors=FALSE)
@@ -132,7 +140,7 @@ op_calculate <- function(enviromental_df, species_df, isRelAb=TRUE, islog10=FALS
         testsp1_final[1,ncol(testsp1_final)+1] <- testsp1_final[valrow,valcol]
       }
     }
-    # Adds a column in the final dataframe with the species' names (from the original CSV file)
+    # Adds a column in the final data frame with the species' names (from the original CSV file)
     testsp1_final <- head(testsp1_final,1)
     testsp1_final <- cbind(a = 'spName', testsp1_final)
     finalDF[species_i,] <- testsp1_final[1,]
@@ -153,8 +161,8 @@ op_calculate <- function(enviromental_df, species_df, isRelAb=TRUE, islog10=FALS
   #increases print option
   options(max.print=900000)
 
-  print("Optimum values and tolerance range calculated and placed in the final dataframe")
-  print("Use View() to view dataframe with results")
+  print("Optimum values and tolerance range calculated and placed in the final data frame")
+  print("Use View() to view data frame with results")
   return(finalDF)
 
 }
