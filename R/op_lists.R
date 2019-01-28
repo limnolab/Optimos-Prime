@@ -18,7 +18,7 @@
 #'     Values in cells therefore need to be the value of each environmental variable at each site.
 #' }
 #' @keywords ecology, optimum, tolerance, species density
-#' @export
+#' @export op_lists
 #'
 
 ########-------- FUNCTION OP_LISTS SHOWS SPECIES LIST AND ENVIRONMENTAL VARIABLES LISTS  --------------#########
@@ -30,9 +30,12 @@ op_lists <- function(enviromental_df, species_df, listOnly=0){
     Filters <- matrix(c("Comma Separated Values (CSV)", "*.csv"),
                       1, 2, byrow = TRUE)
     print("Select ENVIRONMENTAL matrix first")
-    enviromental_df <- read.csv(choose.files(caption="Select environmental matrix", filters = Filters),sep=",")
+    env <- read.csv(file.choose())
+    #enviromental_df <- read.csv(choose.files(caption="Select environmental matrix", filters = Filters),sep=",")
+    enviromental_df <- read.csv(file.choose())
     print("Select SPECIES matrix second")
-    species_df <- read.csv(choose.files(caption="Select species density matrix", filters = Filters),sep=",")
+    # species_df <- read.csv(choose.files(caption="Select species density matrix", filters = Filters),sep=",")
+    species_df <- read.csv(file.choose())
   }
 
 

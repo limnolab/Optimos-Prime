@@ -24,8 +24,14 @@
 #' \itemize{
 #' \item Sathicq, María Belén. (2017). Empleo de descriptores fitoplanctónicos como biomonitores en la evaluación de la calidad del agua en la costa del río de la Plata (Franja Costera Sur). PhD thesis. http://hdl.handle.net/10915/58915
 #' }
+#' @examples
+#' # Loads sample data
+#' data("environmental_data")
+#' data("species_data")
+#' # Calculates the autoecological data
+#' optimos.prime::op_calculate(enviromental_df, species_df)
 #' @keywords ecology, optimum, tolerance, species density
-#' @export
+#' @export op_calculate
 
 ########-------- FUNCTION OP_CALCULATE CALCULATES OPTIMA AND TOLERANCE RANGES  --------------#########
 op_calculate <- function(enviromental_df, species_df, isRelAb=TRUE, islog10=FALSE){
@@ -35,10 +41,12 @@ op_calculate <- function(enviromental_df, species_df, isRelAb=TRUE, islog10=FALS
     ########-------- LOADS THE SPECIES AND ENVIRONMENTAL DATA FROM CSV FILES IF NOT IN DATAMATRIX
     Filters <- matrix(c("Comma Separated Values (CSV)", "*.csv"),
                       1, 2, byrow = TRUE)
-    print("Select ENVIRONMENTAL matrix")
-    enviromental_df <- read.csv(choose.files(caption="Select environmental matrix", filters = Filters),sep=",")
-    print("Select SPECIES matrix")
-    species_df <- read.csv(choose.files(caption="Select species density matrix", filters = Filters),sep=",")
+    print("Select ENVIRONMENTAL matrix first")
+    #enviromental_df <- read.csv(choose.files(caption="Select environmental matrix", filters = Filters),sep=",")
+    enviromental_df <- read.csv(file.choose())
+    print("Select SPECIES matrix second")
+    # species_df <- read.csv(choose.files(caption="Select species density matrix", filters = Filters),sep=",")
+    species_df <- read.csv(file.choose())
   }
 
   df_densidades <- species_df

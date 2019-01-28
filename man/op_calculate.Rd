@@ -38,6 +38,13 @@ Sample data is taken from:
 \item Sathicq, María Belén. (2017). Empleo de descriptores fitoplanctónicos como biomonitores en la evaluación de la calidad del agua en la costa del río de la Plata (Franja Costera Sur). PhD thesis. http://hdl.handle.net/10915/58915
 }
 }
+\examples{
+# Loads sample data
+data("environmental_data")
+data("species_data")
+# Calculates the autoecological data
+optimos.prime::op_calculate(enviromental_df, species_df)
+}
 \keyword{density}
 \keyword{ecology,}
 \keyword{optimum,}

@@ -1,15 +1,18 @@
 Package: optimos.prime
 Type: Package
-Title: Calculates optima and tolerance ranges for biological species given an environmental matrix
+Title: Optimos Prime Helps Calculate Autoecological Data (Optima and Tolerance Ranges) for Biological Species Given an Environmental Matrix
 Version: 0.1.0
-Author: c(person("María Belén", "Sathicq", email = "mbelen@ilpla.edu.ar", role = c("aut")), person("Joaquín", "Cochero", email = "jcochero@ilpla.edu.ar", role = c("cre")))
+Authors@R: c(
+    person("María Belén", "Sathicq", email = "mbelen@ilpla.edu.ar", role = "aut"),
+    person("María Mercedes", "Nicolosi Gelis", email = "mercedesnicolosi@ilpla.edu.ar", role = "aut"),
+    person("Joaquín", "Cochero", email = "jcochero@ilpla.edu.ar", role = "cre"))
 Maintainer: Joaquín Cochero <jcochero@ilpla.edu.ar>
-Description: The package Optimos Prime calculates the ecological optima and tolerance ranges of a biological species
-    according to the article: Potapova, M., & Charles, D. F. (2003). Distribution of benthic diatoms in US rivers in relation to conductivity and ionic composition. Freshwater Biology, 48(8), 1311-1328.
+Description: Calculates autoecological data (optima and tolerance ranges) of a biological species
+    given an environmental matrix by weighted averaging.
 License: GNU General Public License
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 6.1.1.9000
 Depends:
     ggplot2,
     tidyverse,

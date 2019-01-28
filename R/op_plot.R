@@ -7,14 +7,17 @@
 #' This function plots the specified variable in a caterpillar plot
 #' @import ggplot2 tidyverse plotly
 #' @keywords ecology, optimum, tolerance, species density
-#' @export
+#' @export op_plot
 #'
 
 
 ########-------- FUNCTION OP_PLOT CREATES A CATERPILLAR PLOT FOR A SELECTED VARIABLE SHOWING OPTIMA AND TOLERANCE RANGE BY INCREASING OPTIMA  --------------#########
 op_plot <- function(optimaDF, label){
   # Needs tidyverse, ggPlot2, plotly libraries
-
+  optimum = NULL
+  mymean = NULL
+  species = NULL
+  x = NULL
 
   #Checks in there's a dataframe or aborts function
   if(missing(optimaDF) ) {
@@ -55,7 +58,7 @@ op_plot <- function(optimaDF, label){
   colnames(data1) <- c("species", "optimum", "max", "min")
 
   # Reorder data using average
-  data1 = data1 %>% rowwise() %>% mutate( mymean = optimum) %>% arrange(mymean) %>% mutate(x=factor(species, species))
+  data1 = data1 %>% mutate( mymean = optimum) %>% arrange(mymean) %>% mutate(x=factor(species, species))
 
   # PLOT
 plotBasic <- ggplot(data1) +
