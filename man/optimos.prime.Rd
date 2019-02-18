@@ -12,7 +12,7 @@ The calculations for optima and tolerance ranges is conducted according to the a
 }
 Sample data is taken from:
 \itemize{
-\item Sathicq, María Belén. (2017). Empleo de descriptores fitoplanctónicos como biomonitores en la evaluación de la calidad del agua en la costa del río de la Plata (Franja Costera Sur). PhD thesis. http://hdl.handle.net/10915/58915
+\item Sathicq, Maria Belen. (2017). Empleo de descriptores fitoplanctonicos como biomonitores en la evaluacion de la calidad del agua en la costa del Rio de la Plata (Franja Costera Sur). PhD thesis. <http://hdl.handle.net/10915/58915>
 }
 }
 \section{Functions}{
