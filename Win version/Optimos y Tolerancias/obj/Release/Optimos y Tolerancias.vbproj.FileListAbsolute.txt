@@ -1,0 +1,48 @@
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.exe.manifest
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.application
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.exe
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.pdb
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.xml
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos_y_Tolerancias.frmOptimosyTols.resources
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos_y_Tolerancias.Resources.resources
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.vbproj.GenerateResource.Cache
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.TrustInfo.xml
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.exe.manifest
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.application
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.exe
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.xml
+C:\Users\Juaco\Documents\Visual Studio 2008\Projects\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.pdb
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.exe
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.xml
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.pdb
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.exe.manifest
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.application
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.exe
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.pdb
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.xml
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos_y_Tolerancias.frmOptimosyTols.resources
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos_y_Tolerancias.Resources.resources
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.vbproj.GenerateResource.Cache
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.TrustInfo.xml
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.exe.manifest
+C:\Users\Juaco\Dropbox\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.application
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.exe
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.xml
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.pdb
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.exe.manifest
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.application
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.exe
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.pdb
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\bin\Release\Optimos y Tolerancias.xml
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.vbprojResolveAssemblyReference.cache
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos_y_Tolerancias.frmOptimosyTols.resources
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos_y_Tolerancias.Resources.resources
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.vbproj.GenerateResource.Cache
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.TrustInfo.xml
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.exe.manifest
+Z:\Calculador Optimos\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.application
+C:\Users\algas\Desktop\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.exe
+C:\Users\algas\Desktop\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.xml
+C:\Users\algas\Desktop\Optimos y Tolerancias\Optimos y Tolerancias\obj\Release\Optimos y Tolerancias.pdb
