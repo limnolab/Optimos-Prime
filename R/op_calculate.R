@@ -1,5 +1,5 @@
 #' This function of Optimos Prime calculates optima and tolerance for a data frame of species and environmental factors
-#' @param enviromental_df The data frame with your environmental data. Variables as rows, Sites as columns
+#' @param environmental_df The data frame with your environmental data. Variables as rows, Sites as columns
 #' @param species_df The data frame with your species densities. Species as rows, Sites as columns.
 #' @param isRelAb Boolean. If set to 'TRUE' it means that your species' data is the relative abundance of each species per site. If FALSE, it means that it the data corresponds to absolute densities. Default = TRUE
 #' @param islog10 Boolean. If set to 'TRUE' it means that your environmental data is already transformed to log10. Default = FALSE
@@ -32,32 +32,32 @@
 #' data("environmental_data_example2")
 #' data("species_data_example2")
 #' # Calculates the autoecological data
-#' optimos.prime::op_calculate(enviromental_df, species_df)
+#' optimos.prime::op_calculate(environmental_df, species_df)
 #' @keywords ecology, optimum, tolerance, species density
 #' @export op_calculate
 
 ########-------- FUNCTION OP_CALCULATE CALCULATES OPTIMA AND TOLERANCE RANGES  --------------#########
-op_calculate <- function(enviromental_df, species_df, isRelAb=TRUE, islog10=FALSE){
+op_calculate <- function(environmental_df, species_df, isRelAb=TRUE, islog10=FALSE){
     # First checks in environmental and species data frames exist. If not, loads them from CSV files
-    if(missing(enviromental_df) | missing(species_df) ) {
+    if(missing(environmental_df) | missing(species_df) ) {
       print("Select CSV matrices")
     ########-------- LOADS THE SPECIES AND ENVIRONMENTAL DATA FROM CSV FILES IF NOT IN DATAMATRIX
     Filters <- matrix(c("Comma Separated Values (CSV)", "*.csv"),
                       1, 2, byrow = TRUE)
     print("Select ENVIRONMENTAL matrix first")
-    #enviromental_df <- read.csv(choose.files(caption="Select environmental matrix", filters = Filters),sep=",")
-    enviromental_df <- read.csv(file.choose())
+    #environmental_df <- read.csv(choose.files(caption="Select environmental matrix", filters = Filters),sep=",")
+    environmental_df <- read.csv(file.choose())
     print("Select SPECIES matrix second")
     # species_df <- read.csv(choose.files(caption="Select species density matrix", filters = Filters),sep=",")
     species_df <- read.csv(file.choose())
   }
 
   df_densidades <- species_df
-  df_ambientales <- enviromental_df
+  df_ambientales <- environmental_df
 
 
   #Checks that both matrices exist, or exits
-  if(missing(enviromental_df) | missing(species_df) ) {
+  if(missing(environmental_df) | missing(species_df) ) {
     stop("The correct matrices were not selected, the script will cancel.")
   }
 

@@ -4,11 +4,11 @@
 \alias{op_calculate}
 \title{This function of Optimos Prime calculates optima and tolerance for a data frame of species and environmental factors}
 \usage{
-op_calculate(enviromental_df, species_df, isRelAb = TRUE,
+op_calculate(environmental_df, species_df, isRelAb = TRUE,
   islog10 = FALSE)
 }
 \arguments{
-\item{enviromental_df}{The data frame with your environmental data. Variables as rows, Sites as columns}
+\item{environmental_df}{The data frame with your environmental data. Variables as rows, Sites as columns}
 
 \item{species_df}{The data frame with your species densities. Species as rows, Sites as columns.}
 
@@ -46,7 +46,7 @@ data("species_data")
 data("environmental_data_example2")
 data("species_data_example2")
 # Calculates the autoecological data
-optimos.prime::op_calculate(enviromental_df, species_df)
+optimos.prime::op_calculate(environmental_df, species_df)
 }
 \keyword{density}
 \keyword{ecology,}

@@ -1,7 +1,7 @@
 Package: optimos.prime
 Type: Package
 Title: Optimos Prime Helps Calculate Autoecological Data for Biological Species
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("María Belén", "Sathicq", email = "mbelen@ilpla.edu.ar", role = "aut"),
     person("María Mercedes", "Nicolosi Gelis", email = "mercedesnicolosi@ilpla.edu.ar", role = "aut"),

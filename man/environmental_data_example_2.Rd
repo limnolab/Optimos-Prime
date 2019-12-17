@@ -9,7 +9,7 @@
 \url{http://hdl.handle.net/10915/58915}
 }
 \usage{
-data(environmental_data)
+data(environmental_data_example_2)
 }
 \description{
 This sample data is a partial dataset from Sathicq, María Belén. (2017). Empleo de descriptores fitoplanctónicos como biomonitores en la evaluación de la calidad del agua en la costa del río de la Plata (Franja Costera Sur). PhD thesis. http://hdl.handle.net/10915/58915
