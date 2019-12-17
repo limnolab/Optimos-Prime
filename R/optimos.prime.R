@@ -1,7 +1,7 @@
 #' Optimos Prime: A package for calculating autoecological data (optima and tolerance range) for biological species
 #'
 #' @description
-#' The calculations for optima and tolerance ranges is conducted according to the articles by Birks et al. (1990) and Potapova & Charles (2003):
+#' The calculations for optima and tolerance ranges is conducted according to the articles by Birks et al. (1990). A case study for this technique is shown in Potapova & Charles (2003):
 #' \itemize{
 #' \item Birks, H.J.B., Line J.M., Juggins S., Stevenson A.C., and Ter Braak C.J.F. (1990). Diatoms and pH reconstruction. Philosophical Transactions of the Royal Society B 327:263–278
 #' }
