@@ -33,10 +33,11 @@
 #' data("species_data_example2")
 #' # Calculates the autoecological data
 #' optimos.prime::op_calculate(environmental_df, species_df)
-#' @keywords ecology, optimum, tolerance, species density
+#' @concepts ecology, optimum, tolerance, species density
 #' @export op_calculate
 
 ########-------- FUNCTION OP_CALCULATE CALCULATES OPTIMA AND TOLERANCE RANGES  --------------#########
+
 op_calculate <- function(environmental_df, species_df, isRelAb=TRUE, islog10=FALSE){
     # First checks in environmental and species data frames exist. If not, loads them from CSV files
     if(missing(environmental_df) | missing(species_df) ) {
@@ -73,9 +74,21 @@ op_calculate <- function(environmental_df, species_df, isRelAb=TRUE, islog10=FAL
     }
   }
 
+
+  #ADDED IN VERSION 0.1.2
+  #CHECKS IF THERE IS ONLY ONE VARIABLE, IT ADDS A SECOND DUMMY
+  dummy_used = FALSE
+  if(nrow(df_ambientales) == 1){
+    df_ambientales <- rbind(df_ambientales, df_ambientales[1,])
+    dummy_used = TRUE
+  }
+  #FINISH ADD
+
   list_sites <- t(colnames(df_densidades[2:ncol(df_densidades)]))
   list_especies <- as.vector(df_densidades[,1])
   list_ambientales <- as.vector(df_ambientales[,1])
+
+
 
   #builds a matrix of SPECIES vs ENVIRONMENTAL VARIABLES called finalDF (will be used to load the results)
   finalDF <- data.frame(matrix(nrow=nrow(df_densidades), ncol=nrow(df_ambientales)*3 + 1),stringsAsFactors=FALSE)
@@ -174,6 +187,11 @@ op_calculate <- function(environmental_df, species_df, isRelAb=TRUE, islog10=FAL
 
   print("Optimum values and tolerance range calculated and placed in the final data frame")
   print("Use View() to view data frame with results")
+
+  #IF A DUMMY VARIABLE WAS USED, IT REMOVES IT
+  if(dummy_used == TRUE){
+    finalDF <- finalDF[,-c(5:7)]
+  }
   return(finalDF)
 
 }

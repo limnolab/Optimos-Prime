@@ -6,7 +6,7 @@
 #' @description
 #' This function plots the specified variable in a caterpillar plot
 #' @import ggplot2 tidyverse plotly
-#' @keywords ecology, optimum, tolerance, species density
+#' @concepts ecology, optimum, tolerance, species density
 #' @export op_plot
 #'
 
@@ -24,8 +24,10 @@ op_plot <- function(optimaDF, label){
     print("A dataframe with optima and tolerance ranges is needed, as the one obtained from the op_calculate() function.")
     stop("No dataframe specified")
   }
+  #REMOVED IN VERSION 0.1.2
   #Deletes empty rows so it doesn't get stuck in endless loop trying to graph
-  optimaDF <- optimaDF[complete.cases(optimaDF), ]
+  #optimaDF <- optimaDF[complete.cases(optimaDF), ]
+  #FINISH REMOVED
 
   #Offers options for variables
   col_indexes <- seq(2,ncol(optimaDF), 3)
@@ -47,6 +49,7 @@ op_plot <- function(optimaDF, label){
   variablemas <- paste(variable, "-HIGH")
   variablemenos <- paste(variable, "-LOW")
 
+
   data1mean <- optimaDF[[variable]]
   data1mas <- optimaDF[[variablemas]]
   data1menos <- optimaDF[[variablemenos]]
@@ -56,6 +59,9 @@ op_plot <- function(optimaDF, label){
   data1$max <- data1mas
   data1$min <- data1menos
   colnames(data1) <- c("species", "optimum", "max", "min")
+
+  #NEW CHECK FOR N/A VALUES. ADDED IN V.0.1.2
+  data1 <- data1[complete.cases(data1), ]
 
   # Reorder data using average
   data1 = data1 %>% mutate( mymean = optimum) %>% arrange(mymean) %>% mutate(x=factor(species, species))
@@ -83,3 +89,5 @@ print("Plot complete!")
 ggplotly(plotBasic)
 
 }
+
+

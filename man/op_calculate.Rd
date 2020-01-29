@@ -48,8 +48,8 @@ data("species_data_example2")
 # Calculates the autoecological data
 optimos.prime::op_calculate(environmental_df, species_df)
 }
-\keyword{density}
-\keyword{ecology,}
-\keyword{optimum,}
-\keyword{species}
-\keyword{tolerance,}
+\concept{density}
+\concept{ecology}
+\concept{optimum}
+\concept{species}
+\concept{tolerance}

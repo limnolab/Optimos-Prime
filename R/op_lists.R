@@ -17,7 +17,7 @@
 #'     First column needs to be the names of the environmental variables (i.e. physical-chemical parameters).
 #'     Values in cells therefore need to be the value of each environmental variable at each site.
 #' }
-#' @keywords ecology, optimum, tolerance, species density
+#' @concepts ecology, optimum, tolerance, species density
 #' @export op_lists
 #'
 

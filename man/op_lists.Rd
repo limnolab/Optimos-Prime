@@ -30,8 +30,8 @@ You will need two dataframes. If they are not specified as arguments, you will b
 \details{
 This function (op_lists) generates three lists from your dataframes: a species list, an environmental factors list and a sample (or sampling sites) list
 }
-\keyword{density}
-\keyword{ecology,}
-\keyword{optimum,}
-\keyword{species}
-\keyword{tolerance,}
+\concept{density}
+\concept{ecology}
+\concept{optimum}
+\concept{species}
+\concept{tolerance}

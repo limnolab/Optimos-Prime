@@ -17,8 +17,8 @@ This function plots the specified variable in a caterpillar plot
 \details{
 This function (op_plot) generates caterpillar plots for a specified environmental variable showing optima and tolerance ranges as calculated with the op_calculate() function
 }
-\keyword{density}
-\keyword{ecology,}
-\keyword{optimum,}
-\keyword{species}
-\keyword{tolerance,}
+\concept{density}
+\concept{ecology}
+\concept{optimum}
+\concept{species}
+\concept{tolerance}
